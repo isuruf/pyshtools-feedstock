@@ -3,7 +3,7 @@ About pyshtools
 
 Home: https://github.com/SHTOOLS/SHTOOLS
 
-Package license: BSD-3-Clause
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
