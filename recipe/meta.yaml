@@ -1,5 +1,5 @@
 {% set name = "pyshtools" %}
-{% set version = "4.6.2" %}
+{% set version = "4.7" %}
 
 package:
   name: {{ name|lower }}
@@ -23,17 +23,25 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - fftw >=3
-    - liblapack
+    - fftw >=3.3.8
+    - liblapack >=3.8
+    - openblas
   run:
     - python
     - numpy
+    - fftw >=3.3.8
+    - liblapack >=3.8
+    - openblas
     - scipy >=0.14.0
-    - matplotlib-base
+    - matplotlib-base >=3.3
     - astropy
     - xarray
-    - fftw >=3
     - requests
+    - gmt >=6.1.1
+    - pygmt >=0.2
+    - pooch >=1.1
+    - tqdm
+    - cartopy >=0.18
 
 test:
   requires:
@@ -67,3 +75,4 @@ extra:
   recipe-maintainers:
     - megies
     - moorepants
+    - markwieczorek
