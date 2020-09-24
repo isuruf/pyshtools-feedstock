@@ -1,5 +1,5 @@
 {% set name = "pyshtools" %}
-{% set version = "4.7" %}
+{% set version = "4.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: da1d459ca04dcaec9c9637dfe8b178b53fb510333e3d106214950560a1a0d784
+  sha256: cb15fe572f45c4979f3e1dd3e413446c5e375f46f5b6cd7bc0abd76bae5cb551
 
 build:
   number: 0
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -51,17 +51,17 @@ test:
   imports:
     - pyshtools
   commands:
-    - "wget https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-    - "tar -xvf {{ name }}-{{ version }}.tar.gz"
+    - wget https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    - tar -xvf {{ name }}-{{ version }}.tar.gz
     - cd {{ name }}-{{ version }}
-    - "make -C examples/python -f Makefile no-timing"
+    - make -C examples/python -f Makefile no-timing
 
 about:
   home: https://github.com/SHTOOLS/SHTOOLS
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
-  summary: 'Tools for working with spherical harmonics'
+  summary: Tools for working with spherical harmonics
 
   description: |
     SHTOOLS/pysthools is a Fortran-95/Python library that can be used to
