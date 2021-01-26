@@ -22,12 +22,14 @@ requirements:
     - python
     - pip
     - setuptools
+    - nomkl
     - numpy
     - fftw >=3.3.8
     - liblapack >=3.8
     - openblas
   run:
     - python
+    - nomkl
     - numpy
     - fftw >=3.3.8
     - liblapack >=3.8
