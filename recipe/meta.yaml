@@ -27,7 +27,7 @@ requirements:
     - liblapack >=3.8
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - fftw >=3.3.8
     - liblapack >=3.8
     - scipy >=0.14.0
