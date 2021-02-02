@@ -10,7 +10,7 @@ source:
   sha256: 732ccb498fc1581c0ae090eead0af142d2f61cfedac15d337af989f0d7288fa8
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -32,7 +32,7 @@ requirements:
     - liblapack >=3.8
     - scipy >=0.14.0
     - matplotlib-base >=3.3
-    - astropy
+    - astropy >=4.0
     - xarray
     - requests
     - gmt >=6.1.1
